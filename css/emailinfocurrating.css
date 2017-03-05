@@ -1,0 +1,97 @@
+body {
+	width:100%;
+	background-color:black;
+	margin-left:-.01%;
+	font-family: 'Anton', sans-serif;
+	color:#00b83c;
+	height:100vh;
+}
+
+header {
+	width:100%;
+	text-align:center;
+	background-color: #ffbc01;
+	margin-top:-2%;
+	height:39.5%;
+}
+
+header img {
+	margin-top:5%;
+}
+
+section {
+    margin-top: -45px;
+    background-color: black;
+    height: 60.5%;
+}
+
+#getemail {
+	width:100%;
+	text-align:center;
+	padding-top:4%;
+}
+
+#getemail h1 {;
+	font-size:2em;
+	width:100%;
+}
+
+#getemail select {
+    font-family: inherit;
+    border-radius: 3px;
+    width: 20%;
+    text-align: center;
+}
+
+#selectioncontent{
+	text-align:center;
+}
+
+.select2-results__option {
+	color:black;
+}
+
+#selectioncontent p b {
+	color:#ffed01;
+}
+
+input{
+	border-radius: 3px;
+    height: 30px;
+    width: 250px;
+    font-family: inherit;
+    color: black;
+    border-style: none;
+    text-align:center;
+}
+
+
+button {
+	border-radius: 3px;
+    height: 40px;
+    font-family: inherit;
+    border: 2px solid #f80c00;
+    background-color: brown;
+    color: white;
+    font-size: 1.5em;
+    cursor:pointer;
+    margin-top:2%;
+}
+
+button:hover {
+	background-color: #fecb3c;
+}
+footer {
+	width:100%
+	margin-bottom:5%;
+	color:white;
+	font-size:1em;
+	text-align:center;
+}
+footer a {
+	margin-left:2%;
+}
+
+footer img {
+	width:2%;
+}
