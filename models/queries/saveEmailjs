@@ -1,0 +1,25 @@
+var anEmail  = require('../emailsavemodel');
+
+var saveEmail = function(res , req, email)
+{	
+	anEmail.findOne({"email":email} , function(err, anemail){
+
+        if (err)
+        {
+            req.flash('emailSaveStatus','We apologize but something went wrong trying to look up your email against our records'+error);
+            res.redirect('/login');
+        }
+
+        if (anemail)
+        {
+    		//adding 30 minutes to the createDate time        	
+	        anEmail.email= email;
+    		anEmail.save(function(err,user){
+            	req.flash('emailSaveStatus', 'Thank you for registering your email with us. We have sent an email notifying and verfying that everything is setup.');       			
+    		})
+    	}
+      
+	});
+}
+
+module.exports.saveEmail = saveEmail;
