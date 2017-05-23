@@ -7,7 +7,7 @@ $("#close").click(function(){
 	$("#welcomedialog").hide();
 });
 $("footer a").on("mouseenter",function(){
-    $(this).css("color","#f80c0MUSIC ARTIST0");
+    $(this).css("color","#f80c00");
 	$(this).css("cursor","pointer");
 }).on("mouseleave",function(){
      $(this).css("color","white");
@@ -64,7 +64,7 @@ $("footer a").on("click",function(){
 	else if (clickedvalue == " ABOUT MuMoAfruika")
 	{
 		$("body section #selectioncontent").hide();
-		$("body section #getemail").html("<h1>ABOUT US</h1><p style='color:white'>Imagine a music platform that has, at its core, music fans, music producers, and music artists as the main purpose of the platform. This is what's at the heart of MumoAfruika; a platform that is built to interplay at these main three categories of users. With tools that help each of the user types, enjoy streaming, sharing content for their users, and scouting for new talent. MumoAfruika is going to add a flare to the AfroBeat streaming scene.</p>");
+		$("body section #getemail").html("<h1>ABOUT US</h1><p>Imagine a music platform that has, at its core, music fans, music producers, and music artists as the main purpose of the platform. This is what's at the heart of MumoAfruika; a platform that is built to interplay on these main three categories of users. With tools that help each of the user types, enjoy streaming, sharing content for their users, and scouting for new talent. MumoAfruika is going to add a flare to the AfroBeat streaming scene.</p>");
 	}
 });
 
