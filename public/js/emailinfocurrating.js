@@ -49,7 +49,7 @@ $(".userselection").on("select2:select",function(e) {
 
 });
 
-$("#subscribe").on("click", function(){
+$("#subscribe").click(function(){
 	  var email = $("#emailin").val();
 	  var format = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -73,7 +73,7 @@ $("footer a").on("click",function(){
 	if(clickedvalue == " DEVELOPMENT PROGRESS ")
 	{
 		$("body section #selectioncontent").hide();
-		$("body section #getemail").html("<h1>"+clickedvalue+"</h1><p style='color:white'>testing</p>");
+		$("body section #getemail").html("<h1 style='color:#ffed01'>"+clickedvalue+"</h1><p >testing</p>");
 	}
 	
 	else if (clickedvalue == " ABOUT MuMoAfruika")
