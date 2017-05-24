@@ -4,7 +4,6 @@ body {
 	margin-left:-.01%;
 	font-family: 'Anton', sans-serif;
 	color:#00b83c;
-	height:100vh;
 }
 
 header {
@@ -12,7 +11,7 @@ header {
 	text-align:center;
 	background-color: #ffbc01;
 	margin-top:-2%;
-	height:39.5%;
+	height:255.5px;
 }
 
 header img {
@@ -23,7 +22,7 @@ header img {
 section {
     margin-top: -45px;
     background-color: black;
-    height: 60.5%;
+    height: 60.5vh;
 }
 
 #getemail {
