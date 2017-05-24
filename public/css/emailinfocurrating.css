@@ -63,7 +63,7 @@ section {
 #welcomedialog {
     width: 60%;
     margin-left: 20%;
-    margin-top: -240px;
+    margin-top: -268px;
     border-radius:3px;
     z-index:1;
     position:fixed;
@@ -90,6 +90,7 @@ section {
     text-align: center;
     color: black;
     padding-bottom:2%;
+	height:170px
 }
 
 #welcomedialog section p {
