@@ -101,7 +101,7 @@ function subscribeHandling(){
           		  	$("#welcomedialog").show();
 				  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION STATUS");
 				  	$("#welcomedialog #head").css("background-color","#00b83c");
-				  	$("#welcomedialog #head").css("background-color","white");
+				  	$("#welcomedialog #head").css("color","white");
 				  	$("#welcomedialog section p").text(data);
             	}
       		});
@@ -111,7 +111,7 @@ function subscribeHandling(){
 		  	$("#welcomedialog").show();
 		  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION ERROR!");
 		  	$("#welcomedialog #head").css("background-color","#f80c00");
-		  	$("#welcomedialog #head").css("background-color","white");
+		  	$("#welcomedialog #head").css("color","white");
 		  	$("#welcomedialog section p").text("Please check if you entered a valid email address.");
 		  }
 	});
