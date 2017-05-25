@@ -30,7 +30,7 @@ $("footer a").on("click",function(){
 	if(clickedvalue == " DEVELOPMENT PROGRESS ")
 	{
 		$("body section #selectioncontent").hide();
-		$("body section #getemail").html("<h1 style='color:#ffed01'>"+clickedvalue+"</h1><p >testing</p>");
+		$("body section #getemail").html("<h1 style='color:#ffed01'>"+clickedvalue+"</h1><p >Development update coming soon.....</p>");
 	}
 	
 	else if (clickedvalue == " ABOUT MuMoAfruika")
