@@ -9,7 +9,8 @@ var emailSave = mongoose.Schema({
         type         : Date,
         default      : Date.now()
     },
-    email           : String
+    email           : String,
+    usertype        : String
 
 });
 
