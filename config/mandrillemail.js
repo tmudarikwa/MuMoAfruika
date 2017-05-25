@@ -66,4 +66,4 @@ var sendemailsubscriptionconfirmation = function(req, res){
 }
 
 
-module.exports.sendContactEmail =  sendemailsubscriptionconfirmation;
+module.exports.sendEmail =  sendemailsubscriptionconfirmation;

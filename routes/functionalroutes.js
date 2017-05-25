@@ -12,7 +12,7 @@ module.exports = function (app, passport){
     // =====================================
    
     app.post('/subscribeemail', function(req,res){
-        sendEmail.sendContactEmail(req,res);
+        sendEmail.sendEmail(req,res);
     });
 }
 
