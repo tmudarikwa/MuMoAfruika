@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
 
+var saveEmail = require('./models/queries/saveEmail');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 
