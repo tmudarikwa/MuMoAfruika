@@ -11,6 +11,32 @@ exports.saveEmail = function(req , res)
 
         console.log("found one result |");
         console.log(anemail);
+
+        if (err)
+        {
+            var status = 'We apologize but something went wrong trying to look up your email against our records'+err;
+            res.send(status);
+        }
+
+        if (anemail.length == 0)
+        {
+            var emailsave = new anEmail();
+            //adding 30 minutes to the createDate time          
+            emailsave.email= email;
+            emailsave.usertype = usertype;
+            emailsave.save(function(err,user){
+                console.log("************* INSIDE SAVE METHOD*******************");
+                if (err)
+                    res.send(err);
+                sendEmail(req,res);
+                res.send('You have successfully subscribed to our email blast, thank you! We have sent an email notifying and verfying that everything is setup.');                 
+            });
+        }
+        else 
+        {
+            var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm';
+            res.send(status);
+        }
       
 	});
 }
