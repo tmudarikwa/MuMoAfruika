@@ -12,6 +12,7 @@ userSelection();
 
 var defaultgetemailcontent = $("body section #getemail").html();
 $("header img").on("click",function(){
+		$("body .cd-horizontal-timeline").hide();
 		$("body section #getemail").html(defaultgetemailcontent);
 		userSelection();
     });
@@ -36,6 +37,7 @@ $("footer a").on("click",function(){
 	else if (clickedvalue == " ABOUT MuMoAfruika")
 	{
 		$("body section #selectioncontent").hide();
+		$("body .cd-horizontal-timeline").hide();
 		$("body section #getemail").html("<h1 style='color:#ffed01'>ABOUT US</h1><p>Imagine a music platform that has, at its core, music fans, music producers, and music artists as the main purpose of the platform. This is what's at the heart of MumoAfruika; a platform that is built to interplay on these main three categories of users. With tools that help each of the user types, enjoy streaming, sharing content for their users, and scouting for new talent. MumoAfruika is going to add a flare to the AfroBeat streaming scene.</p>");
 	}
 });
