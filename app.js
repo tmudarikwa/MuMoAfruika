@@ -28,7 +28,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-require('./routes/functionalroutes')(app);
+app.post('/subscribeemail', function(req,res){
+    saveEmail.saveEmail(req,res);
+    console.log("reqemail");
+    console.log(req);
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
