@@ -34,7 +34,7 @@ exports.saveEmail = function(req , res)
                 console.log("************* INSIDE SAVE METHOD*******************");
                 if (err)
                     res.send(err);
-                sendEmail(req,res);
+                sendEmail.sendEmail(req,res);
                 res.send('You have successfully subscribed to our email blast, thank you! We have sent an email notifying and verfying that everything is setup.');                 
             });
         }
