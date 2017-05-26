@@ -1,9 +1,11 @@
 var anEmail  = require('../emailsavemodel');
 var sendEmail = require('../../config/mandrillemail');
 
-var saveEmail = function(req , res)
+exports.saveEmail = function(req , res)
 {	
     var data = req.body;
+    
+    console.log("************* INSIDE SAVE EMAIl*******************");
     
 	anEmail.findOne({"email":data.email} , function(err, anemail){
 
@@ -30,5 +32,3 @@ var saveEmail = function(req , res)
       
 	});
 }
-
-module.exports.saveEmail = saveEmail;
