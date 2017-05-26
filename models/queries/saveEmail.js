@@ -18,8 +18,14 @@ exports.saveEmail = function(req , res)
             res.send(status);
         }
 
-        if (anemail.length == 0)
+        if (anemail)
         {
+            var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm';
+            res.send(status);
+        }
+        else 
+        {
+            
             var emailsave = new anEmail();
             //adding 30 minutes to the createDate time          
             emailsave.email= email;
@@ -31,11 +37,6 @@ exports.saveEmail = function(req , res)
                 sendEmail(req,res);
                 res.send('You have successfully subscribed to our email blast, thank you! We have sent an email notifying and verfying that everything is setup.');                 
             });
-        }
-        else 
-        {
-            var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm';
-            res.send(status);
         }
       
 	});
