@@ -30,6 +30,7 @@ $("footer a").on("click",function(){
 	var clickedvalue = $(this).html();
 	if(clickedvalue == " DEVELOPMENT PROGRESS ")
 	{
+		$("body section #getemail").hide();
 		$("body section #selectioncontent").hide();
 		$("body .cd-horizontal-timeline").show();
 	}
