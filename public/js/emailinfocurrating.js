@@ -5,7 +5,7 @@ $("#close").click(function(){
 
 
 $(".userselection").select2({
-	placeholder:"Click to select"
+	placeholder:"click to select"
 });
 
 userSelection();
@@ -30,7 +30,7 @@ $("footer a").on("click",function(){
 	if(clickedvalue == " DEVELOPMENT PROGRESS ")
 	{
 		$("body section #selectioncontent").hide();
-		$("body section #getemail").html("<h1 style='color:#ffed01'>"+clickedvalue+"</h1><p >Development update coming soon.....</p>");
+		$("body .cd-horizontal-timeline").show();
 	}
 	
 	else if (clickedvalue == " ABOUT MuMoAfruika")

@@ -5,12 +5,7 @@ exports.saveEmail = function(req , res)
 {	
     var data = req.body;
     
-    console.log("************* INSIDE SAVE EMAIl*******************");
-    
 	anEmail.findOne({"email":data.email} , function(err, anemail){
-
-        console.log("found one result |");
-        console.log(anemail);
 
         if (err)
         {
@@ -31,7 +26,6 @@ exports.saveEmail = function(req , res)
             emailsave.email= data.email;
             emailsave.usertype = data.usertype;
             emailsave.save(function(err,user){
-                console.log("************* INSIDE SAVE METHOD*******************");
                 if (err)
                     res.send(err);
                 sendEmail.sendEmail(req,res);
