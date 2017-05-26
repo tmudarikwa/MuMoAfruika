@@ -11,8 +11,8 @@ module.exports = function (app, passport){
     // EMAIL SUBSCRIPTION
     // =====================================
    
-    app.get('/subscribeemail', function(req,res){
-        saveEmail.sendEmail(req,res);
+    app.post('/subscribeemail', function(req,res){
+        saveEmail.saveEmail(req,res);
         console.log("reqemail");
         console.log(req);
     });
