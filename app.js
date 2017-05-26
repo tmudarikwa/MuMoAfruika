@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.post('/subscribeemail', function(req,res){
+app.route('/subscribeemail').post(function(req,res){
         sendEmail.sendContactEmail(req,res);
 });
 //require('./routes/functionalroutes')(app);
