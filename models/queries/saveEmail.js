@@ -19,11 +19,12 @@ var saveEmail = function(req , res)
 	        anEmail.email= email;
             anEmail.usertype = usertype;
     		anEmail.save(function(err,user){
+                console.log("************* INSIDE SAVE METHOD*******************");
                 if (err)
                     res.send(err);
                 sendEmail(req,res);
             	res.send('You have successfully subscribed to our email blast, thank you! We have sent an email notifying and verfying that everything is setup.');       			
-    		})
+    		});
     	}
       
 	});
