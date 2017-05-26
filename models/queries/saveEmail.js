@@ -15,10 +15,11 @@ var saveEmail = function(req , res)
 
         if (anemail)
         {
+            var emailsave = new anEmail();
     		//adding 30 minutes to the createDate time        	
-	        anEmail.email= email;
-            anEmail.usertype = usertype;
-    		anEmail.save(function(err,user){
+	        emailsave.email= email;
+            emailsave.usertype = usertype;
+    		emailsave.save(function(err,user){
                 console.log("************* INSIDE SAVE METHOD*******************");
                 if (err)
                     res.send(err);
