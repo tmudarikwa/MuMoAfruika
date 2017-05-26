@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
-var saveEmail = require('./models/queries/saveEmail');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -29,10 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.route('/subscribeemail').post(function(req,res){
-        sendEmail.sendContactEmail(req,res);
-});
-//require('./routes/functionalroutes')(app);
+require('./routes/functionalroutes')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
