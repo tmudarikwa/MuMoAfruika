@@ -15,4 +15,4 @@ var emailSave = mongoose.Schema({
 });
 
 // create the model for users and expose it to our app
-module.exports = mongoose.model('emaiSave', emailSave);
+module.exports = mongoose.model('emailSave', emailSave);
