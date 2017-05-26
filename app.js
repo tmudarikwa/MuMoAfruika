@@ -32,8 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.post('/subscribeemail', function(req,res){
     saveEmail.saveEmail(req,res);
-    console.log("reqemail");
-    console.log(req);
 });
 
 // catch 404 and forward to error handler

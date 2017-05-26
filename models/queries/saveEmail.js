@@ -3,11 +3,9 @@ var sendEmail = require('../../config/mandrillemail');
 
 var saveEmail = function(req , res)
 {	
-    console.log(req);
-    console.log("request ^");
     var data = req.body;
-    console.log(data);
-	anEmail.findOne({"email":email} , function(err, anemail){
+    
+	anEmail.findOne({"email":data.email} , function(err, anemail){
 
         if (err)
         {
