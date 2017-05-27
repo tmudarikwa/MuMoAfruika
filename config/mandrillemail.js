@@ -5,32 +5,33 @@ var mandrill_client = new mandrill.Mandrill('lQi6Z4MbRPDIZ7P8M2qAxg');
 
 var sendemailsubscriptionconfirmation = function(req, res){
 
-	 var data = req.body;
+	var data = req.body;
 
-      var message = {
-                    "html": "<p> Thank you for registering for our email blast. We will, from time to time, keep you posted on our development progress and any other updates that we might have for you.</p>",
-                    "text": "Example text content",
-                    "subject": "MuMoAfruika email subsription successful",
-                    "from_email": "contactus@gerfusa.com",
-                    "from_name": ""+data.email+"",
+  var template_name = "MuMoAfruika Email Subscription Confirmation";
+  var template_content = [{
+        "name": "MuMoAfruika Email Subscription Confirmation"
+    }];
+
+    var message = { 
+                    "subject": "Email Subscription confirmation",
+                    "from_email": "emailsubscription@mumoafruika.com",
+                    "from_name": "emailsubscription@mumoafruika.com",
                     "to": [{
-                            "email": "contactus@gerfusa.com",
-                            "name": "GERF - CONTACTUS",
+                            "email": ""+data.email+"",
                             "type": "to"
                         }],
                     "headers": {
-                        "Reply-To": ""+data.email+""
+                        "Reply-To": "DO NOT REPLY. THIS IS AN AUTOMATED EMAIL"
                     },
                     "important": false,
-                    "track_opens": null,
-                    "track_clicks": null,
+                    "track_opens": true,
+                    "track_clicks": true,
                     "auto_text": null,
                     "auto_html": null,
                     "inline_css": null,
                     "url_strip_qs": null,
                     "preserve_recipients": null,
                     "view_content_link": null,
-                    "bcc_address": ""+data.email+"",
                     "tracking_domain": null,
                     "signing_domain": null,
                     "return_path_domain": null,
@@ -51,15 +52,14 @@ var sendemailsubscriptionconfirmation = function(req, res){
       var async = false;
       var ip_pool = "Main Pool";
       //var send_at = "example send_at";
-      mandrill_client.messages.send({"message": message, "async": async, "ip_pool": ip_pool}, function(result) {
-        console.log(result);
-        var emailsent = "Information submitted! Our team will get back to you asap. Thank you.";
-        if(result.status === 'sent') emailsent = "We apologize there has been an error trying to submit your information.";
+      mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content,"message": message, "async": async, "ip_pool": ip_pool}, function(result) {
+        
+        var emailsent ="You have successfully subscribed to our email blast. Thank you! We have sent you an email verifying that everything is setup( The email might be in your spam/trash if you can not see it in your inbox)."; 
+        if(result.status !== 'sent') emailsent = "We apologize there has been an error trying to send you an email, though your email address has been saved in our records";
         res.send(emailsent);
       }, function(e) {
           // Mandrill returns the error as an object with name and message keys
-          console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
-          var emailsent = "We apologize there has been an error trying to submit your information.";
+          var emailsent = "We apologize there has been an error trying to send you an email, though your email address has been saved in our records";
           res.send(emailsent);
           // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
       });

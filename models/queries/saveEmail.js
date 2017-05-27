@@ -9,13 +9,13 @@ exports.saveEmail = function(req , res)
 
         if (err)
         {
-            var status = 'We apologize but something went wrong trying to look up your email against our records'+err;
+            var status = 'We apologize but something went wrong trying to look up your email against our records -- '+err;
             res.send(status);
         }
 
         if (anemail)
         {
-            var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm';
+            var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm!';
             res.send(status);
         }
         else 
@@ -28,8 +28,7 @@ exports.saveEmail = function(req , res)
             emailsave.save(function(err,user){
                 if (err)
                     res.send(err);
-                sendEmail.sendEmail(req,res);
-                res.send('You have successfully subscribed to our email blast, thank you! We have sent an email notifying and verfying that everything is setup.');                 
+                sendEmail.sendEmail(req,res);              
             });
         }
       
