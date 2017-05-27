@@ -6,7 +6,7 @@
 
  header img{
  	width:95%;
- 	margin-top:35%;
+ 	margin-top:30%;
 
  }
 /**********************************
@@ -14,6 +14,10 @@
   ***********************************/
 .select2 .select2-container {
 	width:353.188px;
+}
+
+#welcomedialog {
+	width:95%;
 }
  
 /**********************************
@@ -34,7 +38,7 @@
 
  header img{
  	width:95%;
- 	margin-top:95%;
+ 	margin-top:30%;
 
  }
 /**********************************
@@ -42,6 +46,10 @@
   ***********************************/
 .select2 .select2-container .select2-container--default {
 	width:294px !important;
+}
+
+#welcomedialog {
+	width:95%;
 }
  
 /**********************************
@@ -60,7 +68,7 @@
 
  header img{
  	width:95%;
- 	margin-top:35%;
+ 	margin-top:30%;
 
  }
 /**********************************
@@ -69,7 +77,10 @@
 .select2 .select2-container .select2-container--default {
 	width:294px !important;
 }
- 
+
+#welcomedialog {
+	width:95%;
+} 
 /**********************************
 	FOOTER
 ***********************************/
@@ -87,7 +98,7 @@
 
  header img{
  	width:35%;
- 	margin-top:95%;
+ 	margin-top:30%;
 
  }
 /**********************************
@@ -95,6 +106,10 @@
   ***********************************/
 .select2 .select2-container .select2-container--default {
 	width:294px !important;
+}
+
+#welcomedialog {
+	width:95%;
 }
  
 /**********************************
