@@ -146,7 +146,7 @@ header{
 
 #welcomedialog {
 	width:95%;
-	margin-left:2.5;
+	margin-left:2.5%;
 }
 
 #welcomedialog section {
@@ -162,7 +162,15 @@ header{
 
 }
 @media screen and (min-width:670px) and (max-width: 799px){
- 
+ /**********************************
+	BODY CONTENT
+  ***********************************/
+
+#welcomedialog {
+	width:95%;
+	margin-left:2.5%;
+}
+
 }
 
 @media screen and (min-width:745px) and (max-width: 799px){
