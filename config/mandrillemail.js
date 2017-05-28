@@ -14,7 +14,7 @@ var sendemailsubscriptionconfirmation = function(req, res){
 
     var message = { 
                     "subject": "Email Subscription confirmation",
-                    "from_email": "emailsubscription@mumoafruika.com",
+                    "from_email": "emailsubscription@gerfusa.com",
                     "from_name": "emailsubscription@mumoafruika.com",
                     "to": [{
                             "email": ""+data.email+"",
@@ -42,7 +42,7 @@ var sendemailsubscriptionconfirmation = function(req, res){
                             "content": "merge1 content"
                         }],
                     "merge_vars": [{
-                            "rcpt": "recipient.email@example.com",
+                            "rcpt": ""+data.email+"",
                             "vars": [{
                                     "name": "merge2",
                                     "content": "merge2 content"

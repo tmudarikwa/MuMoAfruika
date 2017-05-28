@@ -5,7 +5,7 @@
   ***********************************/
 
  header img{
- 	width:95%;
+ 	width:97%;
  	margin-top:30%;
 
  }
@@ -35,7 +35,7 @@
   ***********************************/
 
  header img{
- 	width:95%;
+ 	width:97%;
  	margin-top:30%;
 
  }
@@ -64,7 +64,7 @@
   ***********************************/
 
  header img{
- 	width:95%;
+ 	width:97%;
  	margin-top:30%;
 
  }
@@ -75,7 +75,7 @@
 
 #welcomedialog {
 	width:95%;
-	margin-left:1%;
+	margin-left:0;
 } 
 /**********************************
 	FOOTER
@@ -93,8 +93,8 @@
   ***********************************/
 
  header img{
- 	width:35%;
- 	margin-top:30%;
+ 	width:97%;
+ 	margin-top:35%;
 
  }
 /**********************************
@@ -104,7 +104,7 @@
 
 #welcomedialog {
 	width:95%;
-	margin-left:1%;
+	margin-left:0;
 }
  
 /**********************************
@@ -116,6 +116,31 @@
 
 }
 @media screen and (min-width:619px) and (max-width: 669px){
+/**********************************
+	HEADER
+  ***********************************/
+
+ header img{
+ 	width:97%;
+ 	margin-top:35%;
+
+ }
+/**********************************
+	BODY CONTENT
+  ***********************************/
+
+
+#welcomedialog {
+	width:95%;
+	margin-left:0;
+}
+ 
+/**********************************
+	FOOTER
+***********************************/
+  footer img {
+	  width:8%;
+  }
 
 }
 @media screen and (min-width:670px) and (max-width: 799px){
