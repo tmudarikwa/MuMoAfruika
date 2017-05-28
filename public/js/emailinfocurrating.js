@@ -102,7 +102,7 @@ function subscribeHandling(){
                 {
 
           		  	$("#welcomedialog").show();
-          		  	$("welcomedialog").css("margin-top","268px");
+          		  	$("welcomedialog").css("margin-top","-258px");
 				  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION STATUS");
 				  	$("#welcomedialog #head").css("background-color","#00b83c");
 				  	$("#welcomedialog #head").css("color","white");
