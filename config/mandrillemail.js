@@ -61,7 +61,7 @@ var sendemailsubscriptionconfirmation = function(req, res){
       }, function(e) {
           // Mandrill returns the error as an object with name and message keys
           console.log(e);
-          var emailsent = "We apologize there has been an error trying to send you an email, though we successfully managed to save your email address has been saved in our database. ";
+          var emailsent = "We apologize there has been an error trying to send you an email, though we successfully managed to save your email address has been saved in our database. "+e;
           res.send(emailsent);
           // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
       });
