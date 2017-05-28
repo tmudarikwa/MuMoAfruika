@@ -20,6 +20,9 @@ header{
 	margin-left:2.5%;
 }
  
+#welcomedialog section {
+	margin-top:-26px;
+} 
 /**********************************
 	FOOTER
 ***********************************/
@@ -50,6 +53,10 @@ header{
 	width:95%;
 	margin-left:2.5%;
 }
+
+#welcomedialog section {
+	margin-top:-26px;
+} 
  
 /**********************************
 	FOOTER
@@ -78,6 +85,10 @@ header{
 #welcomedialog {
 	width:95%;
 	margin-left:2.5%;
+} 
+
+#welcomedialog section {
+	margin-top:-26px;
 } 
 /**********************************
 	FOOTER
@@ -109,6 +120,9 @@ header{
 	margin-left:2.5%;
 }
  
+#welcomedialog section {
+	margin-top:-26px;
+}  
 /**********************************
 	FOOTER
 ***********************************/
@@ -134,6 +148,10 @@ header{
 	width:95%;
 	margin-left:2.5;
 }
+
+#welcomedialog section {
+	margin-top:-26px;
+} 
  
 /**********************************
 	FOOTER
