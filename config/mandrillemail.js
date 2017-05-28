@@ -55,13 +55,13 @@ var sendemailsubscriptionconfirmation = function(req, res){
       mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content,"message": message, "async": async, "ip_pool": ip_pool}, function(result) {
         
         var emailsent ="You have successfully subscribed to our email blast. Thank you! We have sent you an email verifying that everything is setup( The email might be in your spam/trash if you can not see it in your inbox)."; 
-        if(result.status !== 'sent') emailsent = "We apologize there has been an error trying to send you an email, though we successfully managed to save your email address has been saved in our database. ";
+        if(result.status !== 'sent') emailsent = "We apologize there has been an error trying to send you an email.However, we successfully managed to save your email address has been saved in our database. ";
         console.log(result);
         res.send(emailsent);
       }, function(e) {
           // Mandrill returns the error as an object with name and message keys
           console.log(e);
-          var emailsent = "We apologize there has been an error trying to send you an email, though we successfully managed to save your email address has been saved in our database. "+e;
+          var emailsent = "We apologize there has been an error putting together necessary setting to send an email to you.However, we successfully managed to save your email address has been saved in our database. "+e;
           res.send(emailsent);
           // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
       });
