@@ -33,6 +33,9 @@ app.use('/', index);
 app.post('/subscribeemail', function(req,res){
     saveEmail.saveEmail(req,res);
 });
+app.post('/unsubscribe?', function(req,res){
+	saveEmail.unsubscribeEmail(req,res);
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
