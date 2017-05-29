@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
 var flash = require('connect-flash');
+var session = require('express-session');
 
 
 var saveEmail = require('./models/queries/saveEmail');
@@ -30,6 +31,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ 
+                  secret: 'sweetIris', 
+                  resave: true,
+                  saveUninitialized: true
+                })); // session secret
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.get('/', function(req, res) {
         // render the page and pass in any flash data if it exists
