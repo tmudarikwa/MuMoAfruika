@@ -51,7 +51,7 @@ exports.saveEmail = function(req , res)
 	});
 }
 
-exports.unsubscribeEmail = function(req, res)
+exports.unsubscribeEmail = function(req, res ,done)
 {
     var data = req.params;
     
