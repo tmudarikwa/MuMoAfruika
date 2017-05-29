@@ -15,7 +15,6 @@ exports.saveEmail = function(req , res)
 
         if (anemail)
         {
-            console.log(anemail);
             if(anemail.usertype == data.usertype)
             {
                 var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm!';
@@ -23,8 +22,6 @@ exports.saveEmail = function(req , res)
             }
             else
             {
-                anEmail.updateOne({"email":data.email})
-
                 anEmail.findByIdAndUpdate(anemail._id,
                                    {$set:{'usertype':data.usertype}},
                                    {new:true},
@@ -57,5 +54,8 @@ exports.saveEmail = function(req , res)
 exports.unsubscribeEmail = function(req, res)
 {
     var data = req.params;
-    console.log(data);
+    
+    anEmail.findOneAndRemove({"email":data.email}, function(err, data){
+        return done(null,"We are sorry that you chose to unsubscribe to our email blast. "+data.email+" has been succesfully removed from our email blast");
+    });
 }

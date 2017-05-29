@@ -34,7 +34,9 @@ app.post('/subscribeemail', function(req,res){
     saveEmail.saveEmail(req,res);
 });
 app.get('/unsubscribe/:email?', function(req,res){
-	saveEmail.unsubscribeEmail(req,res);
+	saveEmail.unsubscribeEmail(req,res, function(err, data){
+		res.render('index', {unsubscribe : data});
+	});
 })
 
 // catch 404 and forward to error handler

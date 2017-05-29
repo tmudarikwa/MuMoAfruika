@@ -43,6 +43,16 @@ $("footer a").on("click",function(){
 	}
 });
 
+var unsubscribe = $("#unsubscribe").text();
+if(unsubscribe.includes("We are"))
+{
+  	$("#welcomedialog").show();
+  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION REMOVAL!");
+  	$("#welcomedialog #head").css("background-color","#f80c00");
+  	$("#welcomedialog #head").css("color","white");
+  	$("#welcomedialog section p").text(unsubscribe);
+}
+
 function userSelection(){
 	$(".userselection").on("select2:select",function(e) {
 		var selection = $(this).val();
