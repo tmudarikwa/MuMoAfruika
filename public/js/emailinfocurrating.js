@@ -33,6 +33,7 @@ $("footer a").on("click",function(){
 		$("body section #selectioncontent").hide();
 		$("body section #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
 		$("body .cd-horizontal-timeline").show();
+		$("body .cd-horizontal-timeline").html("<p> development progress will be updates soon....</p>");
 	}
 	
 	else if (clickedvalue == " ABOUT MuMoAfruika")
