@@ -23,9 +23,18 @@ exports.saveEmail = function(req , res)
             }
             else
             {
-                anemail.usertype = data.usertype;
-                res.send("We found an email already subscribed to our email blast but with a different user type ("+anemail.usertype+"). We have updated the user type to the one you just selected("+data.usertype+")");
+                anEmail.updateOne({"email":data.email})
 
+                anEmail.findByIdAndUpdate(anemail._id,
+                                   {$set:{'usertype':data.usertypedlename}},
+                                   {new:true},
+                                   function(err, updateddata){
+                                    if(err){ 
+                                      res.send(err);
+                                    }
+                                        res.send("We found an email already subscribed to our email blast but with a different user type ("+anemail.usertype+"). We have updated the user type to the one you just selected("+updateddata.usertype+")");
+                
+                                   }); 
             }
         }
         else 
