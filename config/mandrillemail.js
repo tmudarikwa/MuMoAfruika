@@ -55,12 +55,7 @@ var sendemailsubscriptionconfirmation = function(req, res){
       mandrill_client.messages.sendTemplate({"template_name": template_name, "template_content": template_content,"message": message, "async": async, "ip_pool": ip_pool}, function(result) {
         
         var emailsent ="You have successfully subscribed to our email blast. Thank you! We have sent you an email verifying that everything is setup( The email might be in your spam/trash if you can not see it in your inbox)."; 
-        if(result.status !== 'sent') emailsent = "We apologize there has been an error trying to send you an email.However, we successfully managed to save your email address in our database. ";
-        var results = {result};
-        console.log(results);
-        console.log(result);
-        console.log(result.status);
-        console.log(result.reject_reason);
+        if(result[0].status !== 'sent') emailsent = "We apologize there has been an error trying to send you an email.However, we successfully managed to save your email address in our database. ";
         res.send(emailsent);
       }, function(e) {
           // Mandrill returns the error as an object with name and message keys
