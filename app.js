@@ -35,6 +35,7 @@ app.post('/subscribeemail', function(req,res){
 });
 app.get('/unsubscribe/:email?', function(req,res){
 	saveEmail.unsubscribeEmail(req,res, function(err, data){
+		res.redirect('/');
 		res.render('index', {unsubscribe : data});
 	});
 })
