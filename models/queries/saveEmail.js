@@ -55,7 +55,7 @@ exports.unsubscribeEmail = function(req, res ,done)
 {
     var data = req.params;
     
-    anEmail.findOneAndRemove({"email":data.email}, function(err, data){
+    anEmail.findOneAndRemove({"email":data.email}, function(err, deleteddata){
         return done(null,"We are sorry that you chose to unsubscribe to our email blast. "+data.email+" has been succesfully removed from our email blast");
     });
 }
