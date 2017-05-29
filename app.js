@@ -29,13 +29,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.get('/signup', function(req, res) {
+      res.locals.path = '/signup';
+      res.locals.year = date.getFullYear();
+        // render the page and pass in any flash data if it exists
+        res.render('index', { unsubscribe: req.flash('unsubscribeMessage')});
+    });
 app.post('/subscribeemail', function(req,res){
     saveEmail.saveEmail(req,res);
 });
 app.get('/unsubscribe/:email?', function(req,res){
 	saveEmail.unsubscribeEmail(req,res, function(err, data){
-		res.redirect('/', {unsubscribe : data});
+		req.flash('unsubscribeMessage', data);
+		res.redirect('/');
 	});
 })
 
