@@ -33,7 +33,7 @@ app.use('/', index);
 app.post('/subscribeemail', function(req,res){
     saveEmail.saveEmail(req,res);
 });
-app.post('/unsubscribe/:email?', function(req,res){
+app.get('/unsubscribe/:email?', function(req,res){
 	saveEmail.unsubscribeEmail(req,res);
 })
 

@@ -26,7 +26,7 @@ exports.saveEmail = function(req , res)
                 anEmail.updateOne({"email":data.email})
 
                 anEmail.findByIdAndUpdate(anemail._id,
-                                   {$set:{'usertype':data.usertypedlename}},
+                                   {$set:{'usertype':data.usertype}},
                                    {new:true},
                                    function(err, updateddata){
                                     if(err){ 
