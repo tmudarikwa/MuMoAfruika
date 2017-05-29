@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var configDB = require('./config/database.js');
+var flash = require('connect-flash');
+
 
 var saveEmail = require('./models/queries/saveEmail');
 
