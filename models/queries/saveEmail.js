@@ -15,6 +15,7 @@ exports.saveEmail = function(req , res)
 
         if (anemail)
         {
+            console.log(anemail);
             var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm!';
             res.send(status);
         }
