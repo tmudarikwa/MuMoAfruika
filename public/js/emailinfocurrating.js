@@ -46,7 +46,7 @@ $("footer a").on("click",function(){
 function userSelection(){
 	$(".userselection").on("select2:select",function(e) {
 		var selection = $(this).val();
-
+		$(".maincontent").css("height","auto");
 		if(selection.includes("artist"))
 		{
 			selection = "an "+ "<b>" +selection.toUpperCase();

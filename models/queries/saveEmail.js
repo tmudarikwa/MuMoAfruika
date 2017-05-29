@@ -34,3 +34,9 @@ exports.saveEmail = function(req , res)
       
 	});
 }
+
+exports.unsubscribeEmail = function(req, res)
+{
+    var data = req.params;
+    console.log(data);
+}
