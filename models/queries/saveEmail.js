@@ -16,8 +16,17 @@ exports.saveEmail = function(req , res)
         if (anemail)
         {
             console.log(anemail);
-            var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm!';
-            res.send(status);
+            if(anemail.usertype == data.usertype)
+            {
+                var status = 'You have already subscribed to our email blast. Thank you for the ethusiasm!';
+                res.send(status);
+            }
+            else
+            {
+                anemail.usertype = data.usertype;
+                res.send("We found an email already subscribed to our email blast but with a different user type ("+anemail.usertype+"). We have updated the user type to the one you just selected("+data.usertype+")");
+
+            }
         }
         else 
         {
