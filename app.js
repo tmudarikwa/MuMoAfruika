@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(flash()); // use connect-flash for flash messages stored in session
 app.get('/', function(req, res) {
         // render the page and pass in any flash data if it exists
         res.render('index', { unsubscribe: req.flash('unsubscribeMessage')});
@@ -45,7 +45,7 @@ app.get('/unsubscribe/:email?', function(req,res){
 	});
 })
 
-app.use(flash()); // use connect-flash for flash messages stored in session
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
