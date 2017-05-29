@@ -30,8 +30,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-      res.locals.path = '/signup';
-      res.locals.year = date.getFullYear();
         // render the page and pass in any flash data if it exists
         res.render('index', { unsubscribe: req.flash('unsubscribeMessage')});
     });
