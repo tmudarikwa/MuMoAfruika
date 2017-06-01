@@ -3,20 +3,16 @@ $("#close").click(function(){
 	$("#welcomedialog").hide();
 });
 
-
+var defaultgetemailcontent = $("body section #getemail").html();
 $(".userselection").select2({
 	placeholder:"click to select"
 });
 
 userSelection();
 
-var defaultgetemailcontent = $("body section #getemail").html();
 $("header img").on("click",function(){
 		$("body .cd-horizontal-timeline").hide();
 		$("body section #getemail").html(defaultgetemailcontent);
-		$(".userselection").select2({
-			placeholder:"click to select"
-		});
     });
 
 
