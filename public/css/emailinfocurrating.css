@@ -135,6 +135,7 @@ input{
 
 .events-wrapper ol li a { 
     color:#00b83c;
+    text-decoration: none;
 }
 
 .events-content{
