@@ -14,7 +14,9 @@ var defaultgetemailcontent = $("body section #getemail").html();
 $("header img").on("click",function(){
 		$("body .cd-horizontal-timeline").hide();
 		$("body section #getemail").html(defaultgetemailcontent);
-		userSelection();
+		$(".userselection").select2({
+			placeholder:"click to select"
+		});
     });
 
 
