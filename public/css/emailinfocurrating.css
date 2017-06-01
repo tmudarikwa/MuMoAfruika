@@ -118,17 +118,39 @@ input{
 /****************************
     DEVELOPMENT PROGRESS
 ****************************/
-
+.cd-horizontal-timeline{
+    margin-top: -15em;
+}
 .events-wrapper ol {
     list-style-type: none;
     display: inline-flex;
     width:100%;
+    margin-left:-5% 
 }
 
 .events-wrapper ol li {
     width:20%;
     margin-left:5%;
+}
+
+.events-wrapper ol li a { 
     color:#00b83c;
+}
+
+.events-content{
+    background-color: #ffbc01;
+    margin-top: -2em;
+    width: 90%;
+    margin-left: 3%;
+    border-radius: 3px;
+    text-align:center;
+}
+
+.selected {
+    background-color: #ffbc01;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: center;
 }
 
 button {
@@ -159,4 +181,21 @@ footer a {
 
 footer img {
 	width:2%;
+}
+
+.done
+{
+    width: 15%;
+    height: 40%;
+    font-size: 60%;
+    padding: 1%;
+    background-color: #00b83c;
+    border-color:#00b83c;
+}
+
+.progress {
+    width: 25%;
+    height: 40%;
+    font-size: 50%;
+    padding: 1%;
 }
