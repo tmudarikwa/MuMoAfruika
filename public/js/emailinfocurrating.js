@@ -8,16 +8,15 @@ $(".userselection").select2({
 	placeholder:"click to select"
 });
 
-userSelection();
-
 $("header img").on("click",function(){
 		$("body .cd-horizontal-timeline").hide();
 		$("body section #getemail").html(defaultgetemailcontent);
 		$(".userselection").select2({
 			placeholder:"click to select"
 		});
-		userSelection();
     });
+
+userSelection();
 
 
 $("footer a").on("mouseenter",function(){
@@ -32,17 +31,17 @@ $("footer a").on("click",function(){
 	var clickedvalue = $(this).html();
 	if(clickedvalue == " DEVELOPMENT PROGRESS ")
 	{
-		$("body section #selectioncontent").hide();
-		$("body section #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
+		$("body .maincontent #selectioncontent").hide();
+		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
 		$("body .cd-horizontal-timeline").show();
 		$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
 	}
 	
 	else if (clickedvalue == " ABOUT MuMoAfruika")
 	{
-		$("body section #selectioncontent").hide();
+		$("body .maincontent #selectioncontent").hide();
 		$("body .cd-horizontal-timeline").hide();
-		$("body section #getemail").html("<h1 style='color:#ffed01'>ABOUT US</h1><p>Imagine a music platform that has, at its core, music fans, music producers, and music artists as the main purpose of the platform. This is what's at the heart of MumoAfruika; a platform that is built to interplay on these main three categories of users. With tools that help each of the user types, enjoy streaming, sharing content for their users, and scouting for new talent. MumoAfruika is going to add a flare to the AfroBeat streaming scene.</p>");
+		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>ABOUT US</h1><p>Imagine a music platform that has, at its core, music fans, music producers, and music artists as the main purpose of the platform. This is what's at the heart of MumoAfruika; a platform that is built to interplay on these main three categories of users. With tools that help each of the user types, enjoy streaming, sharing content for their users, and scouting for new talent. MumoAfruika is going to add a flare to the AfroBeat streaming scene.</p>");
 	}
 });
 
