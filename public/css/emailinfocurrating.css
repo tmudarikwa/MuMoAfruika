@@ -146,6 +146,13 @@ input{
     text-align:center;
 }
 
+.events-content p {
+    text-align: center;
+    padding: 2.5%;
+    color:black;
+    font-weight: bold;
+}
+
 .selected {
     background-color: #ffbc01;
     border-top-left-radius: 3px;
