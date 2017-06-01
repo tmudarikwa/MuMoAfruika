@@ -115,9 +115,21 @@ input{
     text-align:center;
 }
 
+/****************************
+    DEVELOPMENT PROGRESS
+****************************/
 
+.events-wrapper ol {
+    list-style-type: none;
+    display: inline-flex;
+    width:100%;
+}
 
-
+.events-wrapper ol li {
+    width:20%;
+    margin-left:5%;
+    color:#00b83c;
+}
 
 button {
 	border-radius: 3px;
