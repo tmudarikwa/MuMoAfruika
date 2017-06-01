@@ -36,7 +36,7 @@ $("footer a").on("click",function(){
 		$("body .maincontent #selectioncontent").hide();
 		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
 		$("body .cd-horizontal-timeline").show();
-		$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
+		//$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
 	}
 	
 	else if (clickedvalue == " ABOUT MuMoAfruika")
@@ -56,6 +56,11 @@ if(unsubscribe.includes("We are"))
   	$("#welcomedialog #head").css("color","white");
   	$("#welcomedialog section p").text(unsubscribe);
 }
+
+//handling development progess clicks
+$(".events-wrapper ol").click(function(){
+	console.log($(this));
+});
 
 function userSelection(){
 	$(".userselection").on("select2:select",function(e) {
