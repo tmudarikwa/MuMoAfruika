@@ -14,6 +14,8 @@ $("header img").on("click",function(){
 		$(".userselection").select2({
 			placeholder:"click to select"
 		});
+		userSelection();
+		$("#selectioncontent").show();
     });
 
 userSelection();
