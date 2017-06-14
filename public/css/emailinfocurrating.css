@@ -22,7 +22,7 @@ header img {
 .maincontent {
     margin-top: -45px;
     background-color: black;
-    height:60.5vh;
+    height:60.5vh !important;
 }
 
 #getemail {
