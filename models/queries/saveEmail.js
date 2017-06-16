@@ -29,7 +29,7 @@ exports.saveEmail = function(req , res)
                                     if(err){ 
                                       res.send(err);
                                     }
-                                        res.send("We found an email already subscribed to our email blast but with a different user type ("+anemail.usertype+"). We have updated the user type to the one you just selected("+updateddata.usertype+")");
+                                        res.send("We found an email already subscribed to our email blast but with a different user type ("+anemail.usertype+"). We have updated the user type to the one you just selected ("+updateddata.usertype+").");
                 
                                    }); 
             }

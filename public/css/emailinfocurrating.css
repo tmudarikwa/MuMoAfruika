@@ -65,6 +65,13 @@ header img {
 	color:#ffed01;
 }
 
+#inactive{
+    background-color: rgba(255, 255, 255, 0.63);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
 #welcomedialog {
     width: 60%;
     margin-left: 20%;
@@ -145,7 +152,7 @@ input{
 .events-content{
     background-color: #ffbc01;
     margin-top: -2em;
-    width: 90%;
+    width: 95%;
     margin-left: 3%;
     border-radius: 3px;
     text-align:center;
