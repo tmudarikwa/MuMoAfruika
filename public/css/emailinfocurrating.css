@@ -65,12 +65,6 @@ header img {
 	color:#ffed01;
 }
 
-#inactive{
-    background-color: rgba(255, 255, 255, 0.63);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    cursor: pointer;
-}
 
 #welcomedialog {
     width: 60%;
@@ -169,6 +163,13 @@ input{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     text-align: center;
+}
+
+.inactive{
+    background-color: rgba(255, 255, 255, 0.63);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
 }
 
 button {
