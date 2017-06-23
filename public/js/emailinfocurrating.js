@@ -64,7 +64,7 @@ $(".events-wrapper ol").click(function(){
 
 function userSelection(){
 	$(".userselection").on("select2:select",function(e) {
-		$(this).parent().css('height','68vh');
+		$(this).parent().parent().css('height','68vh');
 		var selection = $(this).val();
 		$(".maincontent").css("height","auto");
 		if(selection.includes("artist"))
