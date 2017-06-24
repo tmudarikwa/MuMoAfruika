@@ -34,6 +34,7 @@ $("footer a").on("click",function(){
 	if(clickedvalue == " DEVELOPMENT PROGRESS ")
 	{
 		$("body .maincontent #selectioncontent").hide();
+		$(".maincontent").css("height","53.5vh");
 		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
 		$("body .cd-horizontal-timeline").show();
 		//$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
@@ -64,7 +65,6 @@ $(".events-wrapper ol").click(function(){
 
 function userSelection(){
 	$(".userselection").on("select2:select",function(e) {
-		$(this).parent().parent().css('background-color','white');
 		var selection = $(this).val();
 		$(".maincontent").css("height","auto");
 		if(selection.includes("artist"))
