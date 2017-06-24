@@ -10,6 +10,7 @@ $(".userselection").select2({
 
 $("header img").on("click",function(){
 		$("body .cd-horizontal-timeline").hide();
+		$(".maincontent").css("height","auto");
 		$("body section #getemail").html(defaultgetemailcontent);
 		$(".userselection").select2({
 			placeholder:"click to select"
