@@ -75,7 +75,7 @@ function userSelection(){
 			$("#selectioncontent").html("<p> As "+selection+"</b>" +" you will have a lot of features at your disposal. Development is currently underway and as we have"+
 										"complete set milestones that are linked to these features, we will send you emails. Furthermore, you will get access to"+
 										" upload your content when our beta pilot version of the platform is ready.<br/> Enter your email and click subscribe"+
-								" to stay upto date with MuMoAfruika. </p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE</button");
+								" to stay upto date with MuMoAfruika. </p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE<img id='loader' src='images/ajax-loader.gif'></button");
 			$("#loader").hide();
 			subscribeHandling();
 		}
@@ -85,7 +85,7 @@ function userSelection(){
 			$("#selectioncontent").html("<p> As "+selection+"</b>" +" you will have access to raw and emerging talent, but it doesn't end there. The tools that we "+
 										" are coining will further take the Afrobeat scene up a notch!"+
 										"<br/> Stay connected with our development progress and be the first to have access to our beta pilot test run of the system by subscribing to our email list."+
-								" </p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE <img id='loader' src='images/ajax-loader'></button");
+								" </p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE <img id='loader' src='images/ajax-loader.gif'></button");
 			$("#loader").hide();
 			subscribeHandling();
 		}
@@ -95,7 +95,7 @@ function userSelection(){
 			$("#selectioncontent").html("<p> As "+selection+"</b>" +" you will stay connected with the latest work from your favorite artists. We even have something"+
 																   " install for you to stay intouch with every concert they do! <br/>So go ahead and subscribe to our email list"+
 																   " and we will keep you updated with our development. <br/>"+
-																   "</p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE <img id='loader' src='images/ajax-loader'> </button");
+																   "</p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE <img id='loader' src='images/ajax-loader.gif'> </button");
 			$("#loader").hide();
 			subscribeHandling();
 
