@@ -23,12 +23,26 @@ header{
 #welcomedialog section {
 	margin-top:-26px;
 } 
+
+/**********************************
+	DEVELOPMENT PROGRESS
+***********************************/
+.selected {
+	width:95%;
+}
+
+.events-wrapper ol {_
+	overflow-x: hidden;
+}
+
+
 /**********************************
 	FOOTER
 ***********************************/
   footer img {
 	  width:8%;
   }
+
 
 }
 
@@ -57,6 +71,18 @@ header{
 #welcomedialog section {
 	margin-top:-26px;
 } 
+
+
+/**********************************
+	DEVELOPMENT PROGRESS
+***********************************/
+.selected {
+	width:95%;
+}
+
+.events-wrapper ol {_
+	overflow-x: hidden;
+}
  
 /**********************************
 	FOOTER
@@ -90,6 +116,19 @@ header{
 #welcomedialog section {
 	margin-top:-26px;
 } 
+
+
+/**********************************
+	DEVELOPMENT PROGRESS
+***********************************/
+.selected {
+	width:95%;
+}
+
+.events-wrapper ol {_
+	overflow-x: hidden;
+}
+
 /**********************************
 	FOOTER
 ***********************************/
