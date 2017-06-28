@@ -127,7 +127,7 @@ input{
 .events-wrapper ol {
     list-style-type: none;
     display: inline-flex;
-    width:100%;
+    width:95%;
     margin-left:-5% 
 }
 
