@@ -38,6 +38,11 @@ header{
 .inactive {
 	display:none;
 }
+
+.events-wrapper ol li {
+	width:45%;
+	margin-left:0;
+}
 /**********************************
 	FOOTER
 ***********************************/
@@ -89,6 +94,11 @@ header{
 .inactive {
 	display:none;
 }
+
+.events-wrapper ol li {
+	width:45%;
+	margin-left:0;
+}
  
 /**********************************
 	FOOTER
@@ -137,6 +147,11 @@ header{
 
 .inactive {
 	display:none;
+}
+
+.events-wrapper ol li {
+	width:45%;
+	margin-left:0;
 }
 /**********************************
 	FOOTER
