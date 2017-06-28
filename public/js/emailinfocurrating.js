@@ -132,6 +132,7 @@ function subscribeHandling(){
 				  	$("#welcomedialog #head").css("background-color","#00b83c");
 				  	$("#welcomedialog #head").css("color","white");
 				  	$("#welcomedialog section p").text(data);
+				  	$("#close").text("CLOSE");
 
             	}
       		});
