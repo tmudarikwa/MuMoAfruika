@@ -35,7 +35,9 @@ header{
 	overflow-x: hidden;
 }
 
-
+.inactive {
+	display:none;
+}
 /**********************************
 	FOOTER
 ***********************************/
@@ -83,6 +85,10 @@ header{
 .events-wrapper ol {_
 	overflow-x: hidden;
 }
+
+.inactive {
+	display:none;
+}
  
 /**********************************
 	FOOTER
@@ -125,10 +131,13 @@ header{
 	width:95%;
 }
 
-.events-wrapper ol {_
+.events-wrapper ol {
 	overflow-x: hidden;
 }
 
+.inactive {
+	display:none;
+}
 /**********************************
 	FOOTER
 ***********************************/
