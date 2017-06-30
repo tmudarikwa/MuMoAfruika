@@ -144,6 +144,7 @@ function subscribeHandling(){
 		  	$("#welcomedialog #head").css("background-color","#f80c00");
 		  	$("#welcomedialog #head").css("color","white");
 		  	$("#welcomedialog section p").text("Please check if you entered a valid email address.");
+		  	$("#close").text("CLOSE");
 		  }
 	});
 }
