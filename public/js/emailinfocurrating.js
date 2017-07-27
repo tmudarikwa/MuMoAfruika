@@ -1,12 +1,22 @@
-
+/********************
+ pop-up dialog close button handling
+********************/
 $("#close").click(function(){
 	$("#welcomedialog").hide();
 });
 
+
+/*******************
+ user type selection 
+*******************/
 var defaultgetemailcontent = $("body section #getemail").html();
 $(".userselection").select2({
 	placeholder:"click to select"
 });
+
+/*******************
+ image click homepage redirect
+*******************/
 
 $("header img").on("click",function(){
 		$("body .cd-horizontal-timeline").hide();
@@ -21,6 +31,9 @@ $("header img").on("click",function(){
 
 userSelection();
 
+/*******************
+ footer color transitions
+*******************/
 
 $("footer a").on("mouseenter",function(){
     $(this).css("color","#f80c00");
