@@ -28,6 +28,11 @@ header{
 /**********************************
 	DEVELOPMENT PROGRESS
 ***********************************/
+
+#getemail img {
+	width:25%;
+}
+
 .selected {
 	width:95%;
 }
@@ -141,6 +146,10 @@ header{
 /**********************************
 	DEVELOPMENT PROGRESS
 ***********************************/
+
+#getemail img {
+	width:25%;
+}
 .selected {
 	width:95%;
 }
