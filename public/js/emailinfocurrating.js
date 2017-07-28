@@ -49,7 +49,7 @@ $("footer a").on("click",function(){
 	{
 		$("body .maincontent #selectioncontent").hide();
 		$(".maincontent").css("height","53.5vh");
-		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1> <img src='images/development_icon.png' alt='Development Progress Icon'>");
+		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT </h1><img src='images/development_icon.png' alt='Development Progress Icon'> <h1>PROGRESS</h1>");
 		$("body .cd-horizontal-timeline").show();
 		//$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
 	}
