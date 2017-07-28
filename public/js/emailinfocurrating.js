@@ -49,8 +49,8 @@ $("footer a").on("click",function(){
 	{
 		$("body .maincontent #selectioncontent").hide();
 		$(".maincontent").css("height","53.5vh");
-		$("body .maincontent #getemail").html("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
-		$("body .maincontent #getemail").append("<img src='images/development_icon.png' alt='Development Progress Icon'>");
+		$("body .maincontent #getemail").html("<img src='images/development_icon.png' alt='Development Progress Icon'>");
+		$("body .maincontent #getemail").append("<h1 style='color:#ffed01'>DEVELOPMENT PROGRESS</h1>");
 		$("body .cd-horizontal-timeline").show();
 		//$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
 	}
