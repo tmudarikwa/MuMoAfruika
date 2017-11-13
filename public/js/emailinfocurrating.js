@@ -31,6 +31,8 @@ $("header img").on("click",function(){
     });
 
 userSelection();
+$(".select2-search--dropdown").css("display","none");
+$(".select2-search").css("display","none");
 
 /*******************
  footer color transitions
