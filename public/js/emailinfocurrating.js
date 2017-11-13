@@ -13,7 +13,7 @@ var defaultgetemailcontent = $("body section #getemail").html();
 $(".userselection").select2({
 	placeholder:"click to select"
 });
-
+$(.select2-search--dropdown).css("display","none");
 /*******************
  image click homepage redirect
 *******************/
