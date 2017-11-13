@@ -25,6 +25,14 @@ header img {
     height:60.5vh;
 }
 
+.select2-search--dropdown{
+    display :none !important
+}
+
+.select2-search{
+    display : none !important
+}
+
 #getemail {
 	width:100%;
 	text-align:center;
