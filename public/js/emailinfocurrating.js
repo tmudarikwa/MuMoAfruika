@@ -13,8 +13,6 @@ var defaultgetemailcontent = $("body section #getemail").html();
 $(".userselection").select2({
 	placeholder:"click to select"
 });
-$(".select2-search--dropdown").css("display","none");
-$(".select2-search").css("display","none");
 /*******************
  image click homepage redirect
 *******************/
@@ -31,8 +29,6 @@ $("header img").on("click",function(){
     });
 
 userSelection();
-$(".select2-search--dropdown").css("display","none");
-$(".select2-search").css("display","none");
 
 /*******************
  footer color transitions
