@@ -1,3 +1,4 @@
+
 body {
 	width:100%;
 	background-color:black;
@@ -201,11 +202,10 @@ footer {
 	text-align:center;
 }
 footer a {
-	margin-left:2%;
 }
 
 footer img {
-	width:2%;
+	width:2% !important;
 }
 
 .done
