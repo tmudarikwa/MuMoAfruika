@@ -34,27 +34,26 @@ html(lang='en')
         thead
           tr
             th
-              a(href='#0' ,data-date='16/04/2017' ) INFORMATION GATHERING & ANALYSIS
+              a(href='#0' ,class="col" ) INFORMATION GATHERING & ANALYSIS
               button.done DONE 
             th(class='selected')
-                a(href='#0' ,data-date='16/05/2017') DESIGN
+                a(href='#0' ,class="col") DESIGN
                 button.progress IN PROGRESS
-            th(class='inactive')
+            th(class='inactive',class="col")
                 a UI & UX DEVELOPMENT                      
-            th(class='inactive')
+            th(class='inactive',class="col")
                 a FUNCTIONAL DEVELOPMENT
-            th(class='inactive')
+            th(class='inactive',class="col")
                 a BETA FUNCTION TEST-1
               span(class='filling-line' aria-hidden='true')
 
-      tbody
-        tr
-          td
-          td(class='selectedcolumn row-5')  
-          p In this phase we are focusing on the graphical design part of our development process. This is chosing color palettes, the types of buttons, and every other nitty gritty visual aspect that will end up on our platform. The main inspiration behind our design choices will be to showcase Africa's exuberance. We are almost done with our design and about to move on to our next phase.
-          td
-          td
-          td
+        tbody
+          tr
+            td
+            td(class='selectedcolumn row-5')  In this phase we are focusing on the graphical design part of our development process. This is chosing color palettes, the types of buttons, and every other nitty gritty visual aspect that will end up on our platform. The main inspiration behind our design choices will be to showcase Africa's exuberance. We are almost done with our design and about to move on to our next phase.
+            td
+            td
+            td
     footer.container-fluid
       div.row
         div.col-md-12
