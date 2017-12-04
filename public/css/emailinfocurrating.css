@@ -96,14 +96,13 @@ header img {
     padding:1%;
 }
 
-#welcomedialog section {
+#welcomedialog #section {
     background-color:#ffbc01;
     border-bottom-right-radius:3px;
     border-bottom-left-radius:3px;
     text-align: center;
     color: black;
     padding-bottom:2%;
-    margin-top:-34px;
 }
 
 #welcomedialog section p {
