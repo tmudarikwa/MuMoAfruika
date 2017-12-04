@@ -96,7 +96,7 @@ header img {
     padding:1%;
 }
 
-#welcomedialog section {
+#welcomedialog tbody, #welcomedialog tfoot {
     background-color:#ffbc01;
     border-bottom-right-radius:3px;
     border-bottom-left-radius:3px;
