@@ -150,7 +150,7 @@ input{
     text-decoration: none;
 }
 
-.events-content{
+table tbody{
     background-color: #ffbc01;
     margin-top: -2em;
     width: 95%;
@@ -159,11 +159,6 @@ input{
     text-align:center;
 }
 
-table tbody {
-    text-align: center;
-    padding: 2.5%;
-    color:black;
-}
 
 .selected {
     background-color: #ffbc01;

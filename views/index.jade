@@ -30,20 +30,20 @@ html(lang='en')
           p Thank you for visiting our page. Whilst we are still in development, we would like you to be able to sign up for our email blast to stay updated with our development progress. In addition to being able to sign up for our email blast, we will be able to give you exclusive and first access to our platform when its ready.
           button(id='close') CONTINUE 
     section(class='cd-horizontal-timeline container-fluid' , style='display:none')
-      table.table
+      table(class="table table-responsive-md")
         thead
           tr
             th
-              a(scope="col" ) INFORMATION GATHERING & ANALYSIS
+              a(class="col-2" ) INFORMATION GATHERING & ANALYSIS
               button.done DONE 
             th(class='selected')
-                a(href='#0' ,scope="col") DESIGN
+                a(href='#0' ,class="col-4") DESIGN
                 button.progress IN PROGRESS
-            th(class='inactive',scope='col')
+            th(class='inactive col-2')
                 a UI & UX DEVELOPMENT                      
-            th(class='inactive',scope='col')
+            th(class='inactive col-2')
                 a FUNCTIONAL DEVELOPMENT
-            th(class='inactive',scope='col')
+            th(class='inactive col-2')
                 a BETA FUNCTION TEST-1
         tbody
           tr 
