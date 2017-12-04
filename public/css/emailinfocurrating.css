@@ -80,11 +80,18 @@ header img {
     position:relative;
 }
 
-#welcomedialog p{
+#welcomedialog #head p{
     text-align:center;
     font-size:2rem;
     
 }
+
+#welcomedialog #head h1{
+    text-align:center;
+    font-size:2rem;
+    
+}
+
 
 #welcomedialog #head {
     background-color:black;
