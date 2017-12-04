@@ -67,7 +67,7 @@ var unsubscribe = $("#unsubscribe").text();
 if(unsubscribe.includes("We are"))
 {
   	$("#welcomedialog").show();
-  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION REMOVAL!");
+  	$("#welcomedialog #head p").text("EMAIL SUBSCRIPTION REMOVAL!");
   	$("#welcomedialog #head").css("background-color","#00b83c");
   	$("#welcomedialog #head").css("color","white");
   	$("#welcomedialog section p").text(unsubscribe);
@@ -141,7 +141,7 @@ function subscribeHandling(){
                 	$("#loader").hide();
           		  	$("#welcomedialog").show();
           		  	$("welcomedialog").css("margin-top","-258px");
-				  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION STATUS");
+				  	$("#welcomedialog #head p").text("EMAIL SUBSCRIPTION STATUS");
 				  	$("#welcomedialog #head").css("background-color","#00b83c");
 				  	$("#welcomedialog #head").css("color","white");
 				  	$("#welcomedialog section p").text(data);
@@ -153,7 +153,7 @@ function subscribeHandling(){
 		  else 
 		  {
 		  	$("#welcomedialog").show();
-		  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION ERROR!");
+		  	$("#welcomedialog #head p").text("EMAIL SUBSCRIPTION ERROR!");
 		  	$("#welcomedialog #head").css("background-color","#f80c00");
 		  	$("#welcomedialog #head").css("color","white");
 		  	$("#welcomedialog section p").text("Please check if you entered a valid email address.");

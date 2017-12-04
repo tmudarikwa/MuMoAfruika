@@ -80,8 +80,9 @@ header img {
     position:relative;
 }
 
-#welcomedialog h1 {
+#welcomedialog p{
     text-align:center;
+    font-size:2rem;
     
 }
 
