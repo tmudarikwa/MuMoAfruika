@@ -127,6 +127,10 @@ input{
 .cd-horizontal-timeline{
     margin-top: -7.5em;
 }
+
+.cd-horizontal-timeline .table{
+    position: relative;
+}
 .events-wrapper ol {
     list-style-type: none;
     display: inline-flex;
@@ -155,7 +159,7 @@ input{
     text-align:center;
 }
 
-.events-content p {
+table tbody {
     text-align: center;
     padding: 2.5%;
     color:black;
