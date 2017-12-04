@@ -1,6 +1,7 @@
 /********************
- pop-up dialog close button handling
+ pop-up dialog close button handling & css
 ********************/
+$("#welcomedialog").css("margin-left",((((window.innerWidth - $("#welcomedialog").width()) / 2) / window.innerWidth) * 100) - 2);
 $("#close").click(function(){
 	$("#welcomedialog").hide();
 });
