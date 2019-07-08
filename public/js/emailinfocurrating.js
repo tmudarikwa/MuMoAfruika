@@ -1,13 +1,17 @@
+var winH = window.innerHeight;
+$(".maincontent").hide()
+
 /********************
  pop-up dialog close button handling & css
 ********************/
 $("#close").click(function(){
 	$("#welcomedialog").hide();
+  $(".maincontent").show();
 });
 
 
 /*******************
- user type selection 
+ user type selection
 *******************/
 var defaultgetemailcontent = $("body section #getemail").html();
 $(".userselection").select2({
@@ -39,7 +43,7 @@ $("footer a").on("mouseenter",function(){
 	$(this).css("cursor","pointer");
 }).on("mouseleave",function(){
      $(this).css("color","white");
-	
+
 });
 
 $("footer a").on("click",function(){
@@ -53,7 +57,7 @@ $("footer a").on("click",function(){
 		$("body .cd-horizontal-timeline").show();
 		//$("body .cd-horizontal-timeline").html("<p style='width:100%;text-align:center'> development progress will be updated soon....</p>");
 	}
-	
+
 	else if (clickedvalue == " ABOUT MuMoAfruika")
 	{
 		$("body .maincontent #selectioncontent").hide();
@@ -73,39 +77,33 @@ if(unsubscribe.includes("We are"))
   	$("#welcomedialog #section p").text(unsubscribe);
 }
 
-//handling development progess clicks
-$(".events-wrapper ol").click(function(){
-	console.log($(this));
-});
-
-function userSelection(){
-	$(".userselection").on("select2:select",function(e) {
-		var selection = $(this).val();
-		$(".maincontent").css("height","auto");
-		if(selection.includes("artist"))
+function userSelection(selection){
+    $(".maincontent").hide();
+    $(".usertypes").show();
+		if(selection.includes("ARTISTS"))
 		{
-			selection = "an "+ "<b>" +selection.toUpperCase();
-			$("#selectioncontent").html("<p> As "+selection+"</b>" +" you will have a lot of features at your disposal. Development is currently underway and as we have"+
+			$(".usertypes .col-sm-4").append("<h1>"+selection+"</h1>")
+			$(".usertypes #getemail").append("<p> You will have a lot of features at your disposal. Development is currently underway and as we have"+
 										"complete set milestones that are linked to these features, we will send you emails. Furthermore, you will get access to"+
 										" upload your content when our beta pilot version of the platform is ready.<br/> Enter your email and click subscribe"+
 								" to stay upto date with MuMoAfruika. </p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE<img id='loader' src='images/ajax-loader.gif'></button");
 			$("#loader").hide();
 			subscribeHandling();
 		}
-		else if (selection.includes("producer"))
+		else if (selection.includes("PRODUCERS"))
 		{
-			selection = "a "+ "<b>" +selection.toUpperCase();
-			$("#selectioncontent").html("<p> As "+selection+"</b>" +" you will have access to raw and emerging talent, but it doesn't end there. The tools that we "+
+      $(".usertypes .col-sm-4").append("<h1>"+selection+"</h1>")
+			$(".usertypes #getemail").append("<p> You will have access to raw and emerging talent, but it doesn't end there. The tools that we "+
 										" are coining will further take the Afrobeat scene up a notch!"+
 										"<br/> Stay connected with our development progress and be the first to have access to our beta pilot test run of the system by subscribing to our email list."+
 								" </p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE <img id='loader' src='images/ajax-loader.gif'></button");
 			$("#loader").hide();
 			subscribeHandling();
 		}
-		else if (selection.includes("fan"))
+		else if (selection.includes("CONTENT"))
 		{
-			selection = "a "+ "<b>" +selection.toUpperCase();
-			$("#selectioncontent").html("<p> As "+selection+"</b>" +" you will stay connected with the latest work from your favorite artists. We even have something"+
+      $(".usertypes .col-sm-4").append("<h1>"+selection+"</h1>")
+			$(".usertypes #getemail").append("<p> You will stay connected with the latest work from your favorite artists. We even have something"+
 																   " install for you to stay intouch with every concert they do! <br/>So go ahead and subscribe to our email list"+
 																   " and we will keep you updated with our development. <br/>"+
 																   "</p> <input type='text' id='emailin' placeholder='ENTER EMAIL ADDRESS' value=''/> <br/> <button id='subscribe'> SUBSCRIBE <img id='loader' src='images/ajax-loader.gif'> </button");
@@ -113,8 +111,6 @@ function userSelection(){
 			subscribeHandling();
 
 		}
-
-	});
 }
 
 function subscribeHandling(){
@@ -126,7 +122,7 @@ function subscribeHandling(){
 		  {
             var data = {};
 
-		  	//get user type 
+		  	//get user type
             data.email = email;
             data.usertype = $(".userselection").val();
             $("#loader").show();
@@ -150,7 +146,7 @@ function subscribeHandling(){
             	}
       		});
 		  	}
-		  else 
+		  else
 		  {
 		  	$("#welcomedialog").show();
 		  	$("#welcomedialog #head h1").text("EMAIL SUBSCRIPTION ERROR!");

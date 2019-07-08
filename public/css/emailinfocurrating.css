@@ -3,33 +3,70 @@ body {
 	background-color:black;
 	margin-left:-.01%;
 	font-family: 'Anton', sans-serif;
-	color:#00b83c;
+	color:#FFF;
+	height:100vh;
 }
 
 header {
 	text-align:center;
-	background-color: #ffbc01;
-	margin-top:-4%;
-	height:15%;
-    z-index: 1;
+	background-color: #E3C96C;
+	height:25vh;
+  z-index: 1;
+	justify-content: center;
 }
 
 header img {
-	margin-top:5%;
 	cursor:pointer;
+	height: 100%;
+  width: auto;
+	margin-top:2.6%;
 }
+
+
 
 .maincontent {
     background-color: black;
-    height:60.5vh;
+    height:75vh !important;
 }
 
-.select2-search--dropdown{
-    display :none !important
+.maincontent div h1{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	padding-top: 45%;
+	font-size: 3vw;
 }
 
-.select2-search{
-    display : none !important
+.maincontent .col-sm-8{
+	padding-top: 5%;
+	font-size: 1.7vw;
+	font-weight: normal;
+}
+
+.maincontent .col-sm-8 p{
+	text-align: left;
+}
+
+#userselection{
+	padding:2.5%;
+}
+
+#userselection div{
+	background-color: #1E1C1C;
+  height: 150px;
+  vertical-align: middle;
+  cursor: pointer;
+	font-size:1.4vw;
+	margin-left:1%;
+	text-align: center;
+	padding: 10% 2% 15% 2%;
+}
+
+#userselection div:hover{
+	font-size: 1.6vw;
+  height: 155px;
+  background-color: #151313;
 }
 
 #getemail {
@@ -38,22 +75,6 @@ header img {
 	padding-top:4%;
 }
 
-#getemail p{
-	padding-left: 2%;
-	padding-right: 2%;
-}
-
-#getemail h1 {;
-	font-size:2em;
-	width:100%;
-}
-
-#getemail select {
-    font-family: inherit;
-    border-radius: 3px;
-    width: 300px !important;
-    text-align: center;
-}
 
 #selectioncontent{
 	text-align:center;
@@ -74,50 +95,45 @@ header img {
 
 
 #welcomedialog {
-    margin-top: -270px ;
-    border-radius:3px;
-    z-index:999;
-    position:relative;
+	height:75vh;
 }
 
-#welcomedialog #head p{
-    text-align:center;
-    font-size:2rem;
-    
+#welcomedialog #head{
+	width: 100%;
+  height: 20%;
+
 }
 
 #welcomedialog #head h1{
-    text-align:center;
-    font-size:2rem;
-    
-}
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 5%;
+	font-size: 2.5vw;
 
-
-#welcomedialog #head {
-    background-color:black;
-    margin-top:0;
-    border-top-right-radius:3px;
-    border-top-left-radius:3px;
-    height:30%;
-    padding:1%;
 }
 
 #welcomedialog #section {
-    background-color:#ffbc01;
-    border-bottom-right-radius:3px;
-    border-bottom-left-radius:3px;
-    text-align: center;
-    color: black;
-    padding-bottom:2%;
+	height: 80%;
+	padding: 5%;
 }
 
-#welcomedialog section p {
-    margin-top: 4%;
-    padding-top: 2%;
+#welcomedialog #section p {
+	font-size: 1.5vw;
 }
 
 #welcomedialog button {
     text-align:center;
+		font-family: inherit;
+    border: none;
+    background-color: #1E1C1C !important;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 2%;
+		height:auto;
+		border-radius: 0;
 }
 input{
 	border-radius: 3px;
@@ -144,17 +160,17 @@ input{
     list-style-type: none;
     display: inline-flex;
     width:95%;
-    margin-left:-5% 
+    margin-left:-5%
 }
 
 .events-wrapper ol li {
     width:20%;
     margin-left:5%;
     text-align:center;
-    
+
 }
 
-.events-wrapper ol li a { 
+.events-wrapper ol li a {
     color:#00b83c;
     text-decoration: none;
 }
@@ -199,11 +215,13 @@ button:hover {
 	background-color: #fecb3c;
 }
 footer {
-	width:100%;
-    bottom:0;
+  bottom:0;
 	color:white;
-	font-size:1em;
+	font-size:1.5vw;
 	text-align:center;
+	height:10vh;
+	background-color: #1E1C1C;
+	margin-right:0;
 }
 footer a {
 	margin-left:2%;

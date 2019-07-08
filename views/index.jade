@@ -2,74 +2,78 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')  
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     title
       | MuMoAfruika | INFO CURRATING
     link( rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous")
     link(  rel="stylesheet",href='css/select/select2.min.css')
     link(  rel="stylesheet",href='css/emailinfocurrating.css')
     link( href='https://fonts.googleapis.com/css?family=Anton', rel="stylesheet")
-  body
-    header.container-fluid
-      .row
-        .col
-          img(src='images/MuMoAfruika.png',class="img-fluid", alt='MuMoAfruika logo')
-    section.maincontent.container-fluid
-      .row
-        .col
-          #getemail
-            h1 SELECT A USER TYPE 
-            select.userselection
-              option(value='') 
-              option(value='artist') MUSIC ARTIST
-              option(value='producer') MUSIC PRODUCER
-              option(value='fan') FAN / LISTENER
-      .row
-        .col    
-          #selectioncontent
-            p MuMoAfruika will be fueled by 3 main user types. Each user type will have its own distinct functions that tailor it to its user group. To get started with subscribing to our email blast, please use the above drop down menu to select a user type.
-          #unsubscribe(style='display:none') #{unsubscribe}
-          div(class='container',id="welcomedialog")
-            #head
-              h1 WELCOME TO MuMoAfruika
-            #section        
-              p Thank you for visiting our page. Whilst we are still in development, we would like you to be able to sign up for our email blast to stay updated with our development progress. In addition to being able to sign up for our email blast, we will be able to give you exclusive and first access to our platform when its ready.
-              button(id='close') CONTINUE 
-    section(class='cd-horizontal-timeline container-fluid' , style='display:none')
-      table(class="table table-responsive-md")
-        thead
-          tr
-            th
-              a INFORMATION GATHERING & ANALYSIS
-              button.done DONE 
-            th(class='selected')
-                a(href='#0' ) DESIGN
+  body.container-fluid
+      header.row
+        img(src='images/MuMoAfruika.png', alt='MuMoAfruika logo')
+      #welcomedialog.row
+        #head
+          h1 WELCOME TO MuMoAfruika
+        #section
+          p
+            | Thank you for visiting our page.
+            br
+            | Whilst we are still in development, we would like you to be able to sign up for our email blast to stay updated with our development progress.
+            br
+            | In addition to being able to sign up for our email blast, we will be able to give you exclusive and first access to our platform when its ready.
+          button#close CONTINUE
+      section.maincontent.row
+        .col-sm-4
+          h1 SELECT A USER TYPE
+        .col-sm-8
+          p
+            | User driven streaming is only one of the many features that will make you fall in love with us.
+            br
+            | To get to know our different user types and to also subscribe to our email blast, please use the drop down menu to select one:
+          #userselection(class='row')
+            #artist(class='col-sm',onclick='userSelection("ARTISTS & CONTENT CREATORS")')
+              | ARTISTS & CONTENT CREATORS
+            #producer(class='col-sm',onclick='userSelection("PRODUCERS, STUDIOS & COMPANIES")')
+              | PRODUCERS, STUDIOS & COMPANIES
+            #fan(class='col-sm',onclick='userSelection("CONTENT FANS")')
+              | CONTENT FANS
+        #unsubscribe(style='display:none')
+      section.usertypes.row(style='display:none')
+        .col-sm-4
+          h1 SELECT A USER TYPE
+        .col-sm-8(id='getemail')
+      section.cd-horizontal-timeline.container-fluid(style='display:none')
+        table.table.table-responsive-md
+          thead
+            tr
+              th
+                a INFORMATION GATHERING & ANALYSIS
+                button.done DONE
+              th.selected
+                a(href='#0') DESIGN
                 button.progress IN PROGRESS
-            th(class='inactive')
-                a UI & UX DEVELOPMENT                      
-            th(class='inactive')
+              th.inactive
+                a UI & UX DEVELOPMENT
+              th.inactive
                 a FUNCTIONAL DEVELOPMENT
-            th(class='inactive')
+              th.inactive
                 a BETA FUNCTION TEST-1
-        tbody
-          tr
-            td(colspan="5") In this phase we are focusing on the graphical design part of our development process. This is chosing color palettes, the types of buttons, and every other nitty gritty visual aspect that will end up on our platform. The main inspiration behind our design choices will be to showcase Africa's exuberance. We are almost done with our design and about to move on to our next phase.
-    footer.container-fluid
-      div.row
-        div.col
-          a  DEVELOPMENT PROGRESS 
-          a  ABOUT MuMoAfruika
-
-      div.row
-        div.col
-          a(href='http://www.facebook.com/mumoafruika')
-           img(src='images/fb.png', alt='facebook logo link')                  
-          a(href='https://www.instagram.com/mumoafruika')
+          tbody
+            tr
+              td(colspan='5')
+                | In this phase we are focusing on the graphical design part of our development process. This is chosing color palettes, the types of buttons, and every other nitty gritty visual aspect that will end up on our platform. The main inspiration behind our design choices will be to showcase Africa's exuberance. We are almost done with our design and about to move on to our next phase.
+      footer.row
+        .col-sm-12
+          a.col-sm  DEVELOPMENT PROGRESS
+          a.col-sm  ABOUT MuMoAfruika
+        .col-sm-12
+          a.col-sm(href='http://www.facebook.com/mumoafruika')
+            img(src='images/fb.png', alt='facebook logo link')
+          a.col-sm(href='https://www.instagram.com/mumoafruika')
             img(src='images/ig.png', alt='instagram logo link')
-
-    script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
-    script( src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous")
-    script( src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous")
-    script(src='js/select/js/select2.full.min.js', defer)
-    script(src='js/emailinfocurrating.js', defer)
-
+      script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh', crossorigin='anonymous')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js', integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ', crossorigin='anonymous')
+      script(src='http://www.mumoafruika.com/js/select/js/select2.full.min.js', defer='')
+      script(src='http://www.mumoafruika.com/js/emailinfocurrating.js', defer='')
