@@ -9,6 +9,7 @@ html(lang='en')
     link(  rel="stylesheet",href='css/select/select2.min.css')
     link(  rel="stylesheet",href='css/emailinfocurrating.css')
     link( href='https://fonts.googleapis.com/css?family=Anton', rel="stylesheet")
+    meta(name='google-site-verification' content='V3cAR9sUqRJ6AFUOpLvM6ZQPcnRIdSLadAsQ70rt5DU')
   body.container-fluid
       header.row
         img(src='images/MuMoAfruika.png', alt='MuMoAfruika logo')
@@ -32,16 +33,15 @@ html(lang='en')
             br
             | To get to know our different user types and to also subscribe to our email blast, please use the drop down menu to select one:
           #userselection(class='row')
-            #artist(class='col-sm',onclick='userSelection("ARTISTS & CONTENT CREATORS")')
+            #artist(class='col-sm')
               | ARTISTS & CONTENT CREATORS
-            #producer(class='col-sm',onclick='userSelection("PRODUCERS, STUDIOS & COMPANIES")')
+            #producer(class='col-sm')
               | PRODUCERS, STUDIOS & COMPANIES
-            #fan(class='col-sm',onclick='userSelection("CONTENT FANS")')
+            #fan(class='col-sm')
               | CONTENT FANS
         #unsubscribe(style='display:none')
-      section.usertypes.row(style='display:none')
+      section.usertypes.row
         .col-sm-4
-          h1 SELECT A USER TYPE
         .col-sm-8(id='getemail')
       section.cd-horizontal-timeline.container-fluid(style='display:none')
         table.table.table-responsive-md
@@ -73,7 +73,8 @@ html(lang='en')
           a.col-sm(href='https://www.instagram.com/mumoafruika')
             img(src='images/ig.png', alt='instagram logo link')
       script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+      script(src='/js/sticky/jquery.sticky.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh', crossorigin='anonymous')
       script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js', integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ', crossorigin='anonymous')
-      script(src='http://www.mumoafruika.com/js/select/js/select2.full.min.js', defer='')
-      script(src='http://www.mumoafruika.com/js/emailinfocurrating.js', defer='')
+      script(src='js/select/js/select2.full.min.js', defer='')
+      script(src='js/emailinfocurrating.js', defer='')
