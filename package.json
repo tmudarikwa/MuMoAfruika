@@ -13,7 +13,7 @@
     "express": "~4.14.1",
     "express-session": "latest",
     "jade": "~1.11.0",
-    "mongodb": "^2.2.24",
+    "mongodb": "^3.6.1",
     "mongoose": "^4.8.5",
     "morgan": "~1.7.0",
     "mandrill-api": "^1.0.45",
